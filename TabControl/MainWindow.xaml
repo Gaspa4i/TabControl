@@ -1,0 +1,63 @@
+﻿<Window x:Class="TabControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TabControl"
+        mc:Ignorable="d"
+        Title="TabControl" Height="221" Width="264">
+    <Grid>
+
+        <TabControl x:Name="products">
+            <TabItem x:Name="nameTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Height="10" Width="10" Fill="Black" />
+                        <TextBlock Margin="3">Name</TextBlock>
+                        <Ellipse Height="10" Width="10" Fill="Black" />
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton IsChecked="True">iPhone S6</RadioButton>
+                        <RadioButton>LG G 4</RadioButton>
+                        <RadioButton>Lumia 550</RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="imageTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="10" Width="10" Fill="Black" />
+                        <TextBlock Margin="3">Image</TextBlock>
+                        <Rectangle Height="10" Width="10" Fill="Black" />
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Canvas>
+                        <Image Source="Resources/money.png" Width="216" Canvas.Left="10" Canvas.Top="2"></Image>
+                    </Canvas>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="contactUsTab">
+                <TabItem.Content>
+                    <Canvas>
+                        <Label Content="Name" Canvas.Left="51" Canvas.Top="3" Height="25" Width="42" HorizontalAlignment="Right"/>
+                        <TextBox Canvas.Left="93" Canvas.Top="51" Width="136"/>
+                        <TextBox Canvas.Left="93" Width="136" Canvas.Top="10"/>
+                        <Button Name="Exit" Content="Ок" Canvas.Left="84" Canvas.Top="98" Width="61" Click="Exit_Click"/>
+                        <Label Content="Email" Canvas.Left="51" Canvas.Top="44" Height="25" Width="42"/>
+                    </Canvas>
+                </TabItem.Content>
+
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="10" Width="10" Fill="Black" />
+                        <TextBlock Margin="3">Contact Us</TextBlock>
+                        <Ellipse Height="10" Width="10" Fill="Black" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
